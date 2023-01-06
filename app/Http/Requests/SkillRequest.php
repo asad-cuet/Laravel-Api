@@ -26,7 +26,7 @@ class SkillRequest extends FormRequest
     {
         return [
             'name'=>['required','min:3','max:20'],
-            'slug'=>['required','unique:skills,slug,'.$this->skill->id]  //except this id
+            'slug'=>['required'] // ,'unique:skills,slug,'.$this->id]  //except this id
             // or, 
             // 'slug'=>['required',Rule::unique('skills')->ignore($this->skill)]
         ];
